@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Facebook post fetcher</title>
+<style>
+.formline{
+	text-align: center;
+	max-width: 470px;
+}
+</style>
+</head>
+<body>
+	<form name="form" action="" method="POST" >{% csrf_token %}
+		<div class="formline">
+			Page ID: <input value="133531496686855" style="margin-left:20%;" name="page_id" />
+		</div>
+		<br>
+		<div class="formline">
+			Post ID: <input value="1295249200515073" style="margin-left:20%;" name="post_id" />
+		</div>
+		<br/>
+		<div class="formline">
+			<button style="border:0px; background-color:#4285F4; margin-top:8%;
+					height:35px; width:80%;margin-left:19%;" type="submit" 
+					value="Fetch" >
+				<strong>Fetch</strong>
+			</button>
+		</div>
+	</form>
+	{{ result |safe}}  <!-- not really, but composing here isn't required! -->
+</body>
+</html>
